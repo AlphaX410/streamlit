@@ -11,7 +11,7 @@ st.bar_chart(df)
 
 data = []
 st.button('Hit me')
-st.download_button('On the dl', data)
+#st.download_button('On the dl', data)
 st.checkbox('Check me out')
 st.radio('Radio', [1,2,3])
 st.selectbox('Select', [1,2,3])
