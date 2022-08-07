@@ -1,16 +1,10 @@
+
 import streamlit as st
+import numpy as np
 import pandas as pd
 
-st.write("""
-# Sales Model
-Below are our sales predictions
-for this customer.
-""")
-df = pd.read_csv("my_data.csv")
-st.bar_chart(df)
+dataframe = pd.DataFrame(
+    np.random.randn(10, 20),
+    columns=('col %d' % i for i in range(20)))
 
-st.form('my_form_identifier')
-st.form_submit_button('Submit to me')
-st.container()
-
-st.expander('Expander')
+st.dataframe(dataframe.style.highlight_max(axis=0))
